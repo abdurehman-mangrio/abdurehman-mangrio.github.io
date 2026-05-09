@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Abdul Rehman - Download CV & Professional Profile</title>
+    <meta name="description" content="Download Abdul Rehman's professional CV. Available as Full-Stack Developer, SOC Analyst & Cybersecurity, and General Engineering resumes.">
+    <meta name="author" content="Abdul Rehman">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Resume | Abdul Rehman - Full-Stack Developer CV">
+    <meta property="og:description" content="Download professional CVs covering MERN Stack, Cybersecurity, and General Engineering expertise.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/myimage.png">
+    <meta property="og:url" content="https://abdurehman-mangrio.github.io/resume.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/myimage.png">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://abdurehman-mangrio.github.io/resume.html">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <style>
+        /* === Print Stylesheet for Resume === */
+        @media print {
+            * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; }
+            body { background: white !important; color: #111 !important; }
+            .navbar, .mobile-menu, .whatsapp-float, #backToTop, .footer,
+            .wave-container, .page-header, #preloader, #custom-cursor,
+            .btn-primary, .btn-outline, .back-btn { display: none !important; }
+            .resume-section { padding: 1rem 0 !important; }
+            .resume-preview-card { box-shadow: none !important; border: 1px solid #ddd !important; }
+            .resume-card { background: #fff !important; border: 1px solid #ddd !important; color: #111 !important; }
+            .resume-card h3, .resume-card p { color: #111 !important; }
+            a { color: #0ea5e9 !important; }
+            .download-actions .btn-outline { display: inline-flex !important; border: 1px solid #0ea5e9 !important; color: #0ea5e9 !important; background: transparent !important; }
+        }
+        .resume-section {
+            padding: 6rem 0;
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        @media (max-width: 992px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .resume-preview-card {
+            background: var(--dark-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: 30px;
+            overflow: hidden;
+            position: sticky;
+            top: 100px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .preview-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(0.2);
+            transition: var(--transition);
+        }
+
+        .resume-preview-card:hover .preview-img {
+            filter: grayscale(0);
+            transform: scale(1.02);
+        }
+
+        .resume-options {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .resume-card {
+            background: var(--dark-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            background: rgba(14, 165, 233, 0.02);
+        }
+
+        .resume-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .resume-card p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .download-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .resume-badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(14, 165, 233, 0.1);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-tag {
+            font-size: 0.75rem;
+            padding: 0.3rem 0.8rem;
+            background: var(--dark-elevated);
+            border: 1px solid var(--border-glass);
+            border-radius: 6px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Custom Smooth Cursor -->
+    <div id="custom-cursor"></div>
+    
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Abdul</span>
+                <span class="logo-highlight">Rehman</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="resume.html" class="nav-link active">Resume</a>
+                <a href="cybersecurity.html" class="nav-link">Security</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">AR</div>
+            <button class="close-menu" id="closeMenu">✕</button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="cybersecurity.html">Security</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-up">My <span class="highlight">Resume</span></h1>
+            <p data-aos="fade-up">Professional credentials and specialized versions</p>
+        </div>
+    </section>
+
+    <!-- Animated Wave Divider -->
+    <div class="wave-container">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(14, 165, 233, 0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(14, 165, 233, 0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(14, 165, 233, 0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--dark-surface)" />
+            </g>
+        </svg>
+    </div>
+
+    <section class="resume-section">
+        <div class="container">
+            <div class="resume-grid">
+                <!-- Resume Preview -->
+                <div class="resume-preview-side" data-aos="fade-right">
+                    <div class="resume-preview-card">
+                        <img src="assets/resume-preview.png" alt="Resume Preview" class="preview-img">
+                    </div>
+                </div>
+
+                <!-- Resume Options -->
+                <div class="resume-options" data-aos="fade-left">
+                    
+                    <!-- Full Stack Version -->
+                    <div class="resume-card">
+                        <span class="resume-badge">Industry Ready</span>
+                        <h3>Full-Stack Developer CV</h3>
+                        <p>Specialized MERN Stack Engineer with a focus on building high-performance web applications. Expertise in creating 15+ repositories with real-time data sync and RESTful API integration.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><strong>Frontend:</strong> React, Tailwind, Next.js</span>
+                            <span class="skill-tag"><strong>Backend:</strong> Node.js, Express, MongoDB</span>
+                            <span class="skill-tag"><strong>Tools:</strong> Git, Docker, Vercel</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="resumes/Full Stack Developer.pdf" download class="btn-primary">Download PDF <i class="fas fa-download"></i></a>
+                            <a href="resumes/Full Stack Developer.pdf" target="_blank" class="btn-outline">View Online</a>
+                        </div>
+                    </div>
+
+                    <!-- CyberSecurity Version -->
+                    <div class="resume-card">
+                        <span class="resume-badge">Specialized</span>
+                        <h3>SOC Analyst & Cybersecurity CV</h3>
+                        <p>Focused on network security, threat hunting, and incident response. Hands-on experience with VAPT and monitoring enterprise traffic for vulnerabilities.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><strong>Security:</strong> VAPT, Nmap, Metasploit</span>
+                            <span class="skill-tag"><strong>Analysis:</strong> SOC, Wireshark, Log Analysis</span>
+                            <span class="skill-tag"><strong>Cert:</strong> Ethical Hacking</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="resumes/Cybersecurity Resume.pdf" download class="btn-primary">Download PDF <i class="fas fa-download"></i></a>
+                            <a href="resumes/Cybersecurity Resume.pdf" target="_blank" class="btn-outline">View Online</a>
+                        </div>
+                    </div>
+
+                    <!-- Android Version -->
+                    <div class="resume-card">
+                        <h3>General Professional CV</h3>
+                        <p>A comprehensive overview of all skills, certifications, and project experience for general software engineering roles.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">SDLC</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Communication</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="resumes/General Resume.pdf" download class="btn-primary">Download PDF <i class="fas fa-download"></i></a>
+                            <a href="resumes/General Resume.pdf" target="_blank" class="btn-outline">View Online</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">Abdul</span>
+                        <span class="logo-highlight">Rehman</span>
+                    </div>
+                    <p>Building high-performance, secure digital experiences with a focus on modern web engineering and cybersecurity excellence.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/abdurehman-mangrio" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span class="live-indicator pulse-dot"></span>
+                        </a>
+                        <a href="https://linkedin.com/in/abdul-rehman-156940247" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://t.me/abdurehman_mangrio" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Professional</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="projects.html">Portfolio</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="cybersecurity.html">Security</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="index.html#services">Web Development</a>
+                    <a href="cybersecurity.html">SOC Operations</a>
+                    <a href="cybersecurity.html">VAPT Services</a>
+                    <a href="index.html#services">App Development</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest tech insights and project updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Abdul Rehman. Built with <i class="fas fa-heart" style="color: #ef4444;"></i> in Pakistan</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

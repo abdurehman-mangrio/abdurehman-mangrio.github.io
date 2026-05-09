@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Abdul Rehman</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <style>
+        .project-detail-header {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(139, 92, 246, 0.05));
+            border-bottom: 1px solid var(--border-glass);
+            margin-top: 80px;
+        }
+        .project-detail-icon {
+            font-size: 6rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        .project-detail-content {
+            padding: 6rem 0;
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+        @media (max-width: 992px) {
+            .detail-grid { grid-template-columns: 1fr; }
+        }
+        .detail-card {
+            background: var(--dark-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transform-style: preserve-3d;
+        }
+        .detail-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .tech-stack-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .tech-stack-list span {
+            padding: 0.5rem 1rem;
+            background: rgba(14, 165, 233, 0.1);
+            color: var(--primary);
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .project-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        .back-btn:hover { color: var(--primary); transform: translateX(-5px); }
+    </style>
+</head>
+
+<body>
+    <!-- Custom Smooth Cursor -->
+    <div id="custom-cursor"></div>
+    <nav class="navbar">
+        <div class="container"><a href="index.html" class="logo"><span class="logo-text">Abdul</span><span class="logo-highlight">Rehman</span></a>
+            <div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="projects.html" class="nav-link">Projects</a><a href="resume.html" class="nav-link">Resume</a><a href="cybersecurity.html" class="nav-link">Security</a><a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a></div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">AR</div><button class="close-menu" id="closeMenu">✕</button>
+        </div>
+        <div class="mobile-menu-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="resume.html">Resume</a><a href="cybersecurity.html">Security</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div>
+    </div>
+
+    <section class="project-detail-header">
+        <div class="container text-center">
+            <i id="projIcon" class="fas fa-globe project-detail-icon"></i>
+            <h1 id="projTitle" data-aos="fade-up">Project Title</h1>
+            <p id="projCategory" data-aos="fade-up" style="color: var(--text-muted); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px;">Category</p>
+        </div>
+    </section>
+
+    <section class="project-detail-content">
+        <div class="container">
+            <a href="projects.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            
+            <!-- Dynamic Project Image Display -->
+            <div class="detail-card" data-aos="zoom-in" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
+                <img id="projImage" src="" alt="Project Visual" style="width: 100%; height: auto; display: block; object-fit: cover; border-radius: 20px;">
+            </div>
+
+            <!-- Project Gallery -->
+            <div id="projGallery" class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                <!-- Gallery images will be injected here -->
+            </div>
+
+            <div class="detail-grid">
+                <div class="main-details" data-aos="fade-right">
+                    <div class="detail-card">
+                        <h2 class="detail-title">Overview</h2>
+                        <p id="projDesc" style="line-height: 1.8; color: var(--text-muted);">Loading description...</p>
+                    </div>
+                    <div class="detail-card">
+                        <h2 class="detail-title">Features & Development</h2>
+                        <p style="line-height: 1.8; color: var(--text-muted);">This project was built to address complex challenges using modern architectural patterns. Key features include a scalable database structure, robust authentication logic, and an intuitive user interface designed for maximum engagement.</p>
+                    </div>
+                </div>
+                <div class="sidebar-details" data-aos="fade-left">
+                    <div class="detail-card">
+                        <h2 class="detail-title">Tech Stack</h2>
+                        <div id="projTech" class="tech-stack-list">
+                            <!-- Tech stack will be injected here -->
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <h2 class="detail-title">Links</h2>
+                        <div class="project-actions" id="projLinks">
+                            <!-- Links will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">Abdul</span>
+                        <span class="logo-highlight">Rehman</span>
+                    </div>
+                    <p>Building high-performance, secure digital experiences with a focus on modern web engineering and cybersecurity excellence.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/abdurehman-mangrio" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span class="live-indicator pulse-dot"></span>
+                        </a>
+                        <a href="https://linkedin.com/in/abdul-rehman-156940247" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://t.me/abdurehman_mangrio" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Professional</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="projects.html">Portfolio</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="cybersecurity.html">Security</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="index.html#services">Web Development</a>
+                    <a href="cybersecurity.html">SOC Operations</a>
+                    <a href="cybersecurity.html">VAPT Services</a>
+                    <a href="index.html#services">App Development</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest tech insights and project updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Abdul Rehman. Built with <i class="fas fa-heart pulse" style="color: #ef4444;"></i> in Pakistan</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const globalProjects = [
+            { id: "react-weather", title: "React Weather App", category: "web", description: "A high-performance weather dashboard built with React.js, featuring real-time data fetching and location-based forecasts. Integrates OpenWeather API.", tech: ["React", "API", "JavaScript", "Vite"], icon: "fa-cloud-sun", image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=1000", "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?q=80&w=1000"], liveUrl: "https://react-weather-app-zeta-lime.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/react-weather-app" },
+            { id: "coffee-web", title: "Coffee Web Portal", category: "web", description: "A premium, fully responsive coffee shop landing page with advanced animations and glassmorphism design.", tech: ["HTML5", "CSS3", "JavaScript", "AOS"], icon: "fa-coffee", image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000", "https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=1000"], liveUrl: "https://coffee-web-blond-beta.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/coffee-web" },
+            { id: "movie-search", title: "Movie Search Engine", category: "web", description: "Dynamic film explorer using TMDB API. Users can browse trending movies and search by title.", tech: ["React", "API", "Tailwind", "Vite"], icon: "fa-film", image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1000", "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1000"], liveUrl: "https://movie-search-app-six-tawny.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/movie-search-app" },
+            { id: "expense-tracker", title: "Expense Tracker Pro", category: "web", description: "Financial management tool for tracking daily expenses and income with visual analytics.", tech: ["React", "Context API", "JavaScript", "Charts"], icon: "fa-wallet", image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1454165833767-027ffea9e778?q=80&w=1000", "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000"], liveUrl: "https://expense-tracker-app-smoky-mu.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/expense-tracker-app" },
+            { id: "travel-tour", title: "Travel & Tour Website", category: "web", description: "Professional travel agency platform showcasing global tour packages with interactive cards.", tech: ["HTML5", "CSS3", "JavaScript", "GSAP"], icon: "fa-plane", image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?q=80&w=1000", "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1000"], liveUrl: "https://travel-tour-website-mu.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/travel-tour-website" },
+            { id: "ecommerce-admin", title: "E-Commerce Admin Panel", category: "web", description: "Fully responsive React/Tailwind dashboard with interactive charts and management UI.", tech: ["React", "Tailwind", "Vite", "Recharts"], icon: "fa-columns", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1551288561-00843269666c?q=80&w=1000", "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1000"], liveUrl: "https://ecommerce-admin-panel-xi-three.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/ecommerce-admin-panel" },
+            { id: "ai-quiz", title: "AI Protected Quiz App", category: "web", description: "Security-focused quiz application with AI-based monitoring and technical stack transparency.", tech: ["React", "Node.js", "AI Integration"], icon: "fa-brain", image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000"], liveUrl: "https://ai-protected-quiz-app.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/AI-Protected-Quiz-App" },
+            { id: "shadowtwin", title: "ShadowTwin Framework", category: "security", description: "Advanced Evil Twin framework for wireless penetration testing and security research.", tech: ["Python", "Networking", "Wireless Security"], icon: "fa-user-secret", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000"], liveUrl: "#", githubUrl: "https://github.com/abdurehman-mangrio/shadowtwin" },
+            { id: "nearby-scanner", title: "NearBy Scanner Tracker", category: "security", description: "Wireless device scanner and tracker for identifying nearby bluetooth/wifi signals.", tech: ["Python", "IoT", "Radio Signal"], icon: "fa-broadcast-tower", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000"], liveUrl: "#", githubUrl: "https://github.com/abdurehman-mangrio/Near_By_Scanner_Tracker" },
+            { id: "recipe-finder", title: "Recipe Finder Hub", category: "web", description: "Search engine for global recipes with ingredient filters and step-by-step instructions.", tech: ["JavaScript", "API", "CSS3"], icon: "fa-utensils", image: "https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1495521821757-a1efb6729352?q=80&w=1000"], liveUrl: "https://recipe-finder-app-green-sigma.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/recipe-finder-app" },
+            { id: "techsphere-backend", title: "TechSphere Admin Backend", category: "web", description: "Scalable REST API for enterprise admin panels with secure authentication.", tech: ["Node.js", "Express", "MongoDB", "JWT"], icon: "fa-server", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1451187534959-52567219971c?q=80&w=1000"], liveUrl: "https://techsphere-admin-backend.vercel.app/", githubUrl: "https://github.com/abdurehman-mangrio/techsphere-admin-backend" },
+            { id: "blog-website", title: "Modern Blog Platform", category: "web", description: "Full-featured blog system with multi-author support and SEO optimization.", tech: ["TypeScript", "React", "Node.js"], icon: "fa-blog", image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=1000"], liveUrl: "https://blog-website-taupe-five.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/blog-website" },
+            { id: "crud-app-ui", title: "Advanced CRUD Interface", category: "web", description: "Sophisticated frontend for management systems with real-time data sync.", tech: ["React", "Material UI", "Redux"], icon: "fa-table", image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000"], liveUrl: "https://crud-app-ui-beige.vercel.app/", githubUrl: "https://github.com/abdurehman-mangrio/crud-app-ui" },
+            { id: "hackathon-portal", title: "Hackathon Event Portal", category: "web", description: "Registration and management platform for developer events and competitions.", tech: ["HTML5", "CSS3", "JavaScript"], icon: "fa-laptop-code", image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1000"], liveUrl: "https://hackathon-portal-red.vercel.app/", githubUrl: "https://github.com/abdurehman-mangrio/hackathon-portal" },
+            { id: "crud-app-core", title: "CRUD System Backend", category: "web", description: "Core logic for data management applications with high-performance routing.", tech: ["JavaScript", "Node.js", "SQL"], icon: "fa-database", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000", gallery: ["https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=1000"], liveUrl: "#", githubUrl: "https://github.com/abdurehman-mangrio/crud-app" },
+            { id: "zen-wellness", title: "Zen-Wellness App", category: "android", description: "A minimalist mindfulness and meditation app featuring smooth Flutter animations and a premium glassmorphic UI. Focused on providing a calming user experience with interactive breathing exercises.", tech: ["Flutter", "Dart", "Provider", "Rive"], icon: "fa-leaf", image: "https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", gallery: ["https://images.pexels.com/photos/3758838/pexels-photo-3758838.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=600"], liveUrl: "https://github.com/iampawan/Flutter-UI-Kit", githubUrl: "https://github.com/iampawan/Flutter-UI-Kit" },
+            { id: "swift-shop", title: "Swift-Shop E-Commerce", category: "android", description: "A high-performance retail application built with Flutter. Features a dynamic product explorer, interactive shopping cart, and seamless checkout transitions.", tech: ["Flutter", "Firebase", "GetX"], icon: "fa-shopping-bag", image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", gallery: ["https://images.pexels.com/photos/34577/pexels-photo-34577.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?auto=compress&cs=tinysrgb&w=600"], liveUrl: "https://github.com/abuanwar07/E-commerce-App-Flutter", githubUrl: "https://github.com/abuanwar07/E-commerce-App-Flutter" },
+            { id: "flutter-portfolio", title: "Professional Flutter Portfolio", category: "android", description: "A high-performance, multi-platform personal portfolio application built with Flutter. Showcases advanced UI transitions and responsive design.", tech: ["Flutter", "Dart", "Rive", "Provider"], icon: "fa-user-circle", image: "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", gallery: ["https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600"], liveUrl: "https://github.com/lohanidamodar/flutter_portfolio", githubUrl: "https://github.com/lohanidamodar/flutter_portfolio" },
+            { id: "flutter-ecommerce", title: "E-Commerce Pro Solution", category: "android", description: "A complete, production-ready retail mobile app with advanced filtering, real-time cart logic, and Firebase backend integration.", tech: ["Flutter", "Firebase", "GetX"], icon: "fa-shopping-cart", image: "https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", gallery: ["https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/34577/pexels-photo-34577.jpeg?auto=compress&cs=tinysrgb&w=600"], liveUrl: "https://github.com/abuanwar07/E-commerce-Complete-Flutter-App", githubUrl: "https://github.com/abuanwar07/E-commerce-Complete-Flutter-App" },
+            { id: "android-chat", title: "Real-Time Chat Messenger", category: "android", description: "Native Android messaging app built with Kotlin. Features end-to-end encryption, real-time Socket.io synchronization, and local message caching.", tech: ["Kotlin", "Socket.io", "MVVM", "Room"], icon: "fa-comments", image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", gallery: ["https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/3944454/pexels-photo-3944454.jpeg?auto=compress&cs=tinysrgb&w=600"], liveUrl: "https://github.com/getstream/stream-chat-android", githubUrl: "https://github.com/getstream/stream-chat-android" },
+            { id: "sitepulse-seo", title: "SitePulse Technical Auditor", category: "seo", description: "Technical SEO crawler for identifying indexing issues and Core Web Vitals performance bottlenecks. Generates comprehensive audit reports for web optimization.", tech: ["Node.js", "Puppeteer", "Express"], icon: "fa-search-dollar", image: "https://images.pexels.com/photos/5900222/pexels-photo-5900222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", gallery: ["https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600"], liveUrl: "https://github.com/JustinBeckwith/linkinator", githubUrl: "https://github.com/JustinBeckwith/linkinator" },
+            { id: "ranktracker-analytics", title: "RankTracker Pro Analytics", category: "seo", description: "Keyword position tracking dashboard with automated search engine data visualization and competitor analysis features.", tech: ["React", "TypeScript", "Chart.js"], icon: "fa-chart-line", image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", gallery: ["https://images.pexels.com/photos/5900222/pexels-photo-5900222.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=600"], liveUrl: "https://github.com/hiteshjasani/serpbear", githubUrl: "https://github.com/hiteshjasani/serpbear" }
+        ];
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            const project = globalProjects.find(p => p.id === projectId);
+
+            if (project) {
+                document.getElementById('projTitle').innerText = project.title;
+                document.getElementById('projCategory').innerText = project.category;
+                document.getElementById('projDesc').innerText = project.description;
+                document.getElementById('projIcon').className = `fas ${project.icon} project-detail-icon`;
+                
+                // Inject Project Image
+                const imgEl = document.getElementById('projImage');
+                if (project.image) {
+                    imgEl.src = project.image;
+                    imgEl.alt = project.title;
+                } else {
+                    imgEl.parentElement.style.display = 'none';
+                }
+
+                // Inject Gallery
+                const galleryEl = document.getElementById('projGallery');
+                if (project.gallery && project.gallery.length > 0) {
+                    galleryEl.innerHTML = project.gallery.map(imgSrc => `
+                        <div class="detail-card" data-aos="fade-up" style="padding: 0; overflow: hidden; height: 180px;">
+                            <img src="${imgSrc}" alt="Gallery Image" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        </div>
+                    `).join('');
+                } else {
+                    galleryEl.style.display = 'none';
+                }
+                
+                document.getElementById('projTech').innerHTML = project.tech.map(t => `<span>${t}</span>`).join('');
+                
+                let linksHtml = '';
+                if(project.liveUrl !== '#') linksHtml += `<a href="${project.liveUrl}" target="_blank" class="btn-primary">Live Demo <i class="fas fa-external-link-alt"></i></a>`;
+                if(project.githubUrl !== '#') linksHtml += `<a href="${project.githubUrl}" target="_blank" class="btn-outline">Source Code <i class="fab fa-github"></i></a>`;
+                document.getElementById('projLinks').innerHTML = linksHtml || '<p style="color:var(--text-muted);">Links confidential / under NDA.</p>';
+            } else {
+                document.getElementById('projTitle').innerText = "Project Not Found";
+                document.getElementById('projDesc').innerText = "Please return to the projects page and select a valid project.";
+            }
+        });
+    </script>
+</body>
+</html>

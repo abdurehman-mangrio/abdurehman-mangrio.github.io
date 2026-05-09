@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | Abdul Rehman Portfolio</title>
+    <meta name="robots" content="noindex">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 1.5rem 4rem;
+        }
+        .error-page::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .error-content { position: relative; z-index: 1; max-width: 600px; }
+        .error-code {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(8rem, 20vw, 14rem);
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: float 4s ease-in-out infinite;
+            display: block;
+        }
+        .error-icon {
+            font-size: 3.5rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            display: block;
+            opacity: 0.5;
+        }
+        .error-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+        .error-msg {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 480px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+        .error-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        .quick-links {
+            margin-top: 3rem;
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .quick-link {
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--border-glass);
+            border-radius: 50px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .quick-link:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background: rgba(14, 165, 233, 0.05);
+        }
+        /* Countdown redirect */
+        .countdown-msg {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 2rem;
+            opacity: 0.7;
+        }
+        .countdown-num { color: var(--primary); font-weight: 700; }
+    </style>
+</head>
+<body>
+    <!-- Custom Smooth Cursor -->
+    <div id="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Abdul</span>
+                <span class="logo-highlight">Rehman</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">AR</div>
+            <button class="close-menu" id="closeMenu" aria-label="Close menu">✕</button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Error Section -->
+    <section class="error-page">
+        <div class="error-content" data-aos="fade-up">
+            <span class="error-code">404</span>
+            <i class="fas fa-satellite-dish error-icon"></i>
+            <h1 class="error-title">Signal <span class="highlight">Lost</span></h1>
+            <p class="error-msg">
+                The page you're looking for has drifted into deep space. It might have been moved, deleted, or never existed in the first place.
+            </p>
+            <div class="error-actions">
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+                <a href="contact.html" class="btn-outline">
+                    <i class="fas fa-envelope"></i> Report This
+                </a>
+            </div>
+            <div class="quick-links">
+                <a href="projects.html" class="quick-link">Projects</a>
+                <a href="about.html" class="quick-link">About</a>
+                <a href="resume.html" class="quick-link">Resume</a>
+                <a href="blog.html" class="quick-link">Blog</a>
+                <a href="cybersecurity.html" class="quick-link">Security</a>
+            </div>
+            <p class="countdown-msg">Redirecting to home in <span class="countdown-num" id="countdown">10</span> seconds...</p>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init AOS
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true });
+
+        // Theme toggle (standalone, no dependency on main.js)
+        (function() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+            const btn = document.getElementById('theme-toggle');
+            const icon = btn?.querySelector('i');
+            if (saved === 'light' && icon) { icon.classList.replace('fa-moon', 'fa-sun'); }
+            btn?.addEventListener('click', () => {
+                const curr = document.documentElement.getAttribute('data-theme');
+                const next = curr === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                if (icon) icon.classList.toggle('fa-moon');
+                if (icon) icon.classList.toggle('fa-sun');
+            });
+        })();
+
+        // Custom cursor
+        const cursor = document.getElementById('custom-cursor');
+        if (cursor) {
+            document.addEventListener('mousemove', e => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+        }
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        menuToggle?.addEventListener('click', () => mobileMenu?.classList.add('open'));
+        closeMenu?.addEventListener('click', () => mobileMenu?.classList.remove('open'));
+
+        // Auto-redirect countdown
+        let secs = 10;
+        const countEl = document.getElementById('countdown');
+        const timer = setInterval(() => {
+            secs--;
+            if (countEl) countEl.textContent = secs;
+            if (secs <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

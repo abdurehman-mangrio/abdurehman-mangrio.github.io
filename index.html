@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Abdul Rehman | Full-Stack Developer & Cybersecurity Expert</title>
+    <meta name="description"
+        content="Professional portfolio of Abdul Rehman - MERN Stack Developer, Cybersecurity Enthusiast, and Android Developer">
+    <meta name="keywords"
+        content="Abdul Rehman, MERN Stack Developer, Full Stack Developer, Cybersecurity, Android Developer">
+    <meta name="author" content="Abdul Rehman">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Abdul Rehman - Full-Stack Developer & Cybersecurity Expert">
+    <meta property="og:description" content="MERN Stack Developer & SOC Analyst from Pakistan. Building secure, scalable web applications and mobile solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/myimage.png">
+    <meta property="og:url" content="https://abdurehman-mangrio.github.io/">
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abdul Rehman | Full-Stack Developer & Cybersecurity Expert">
+    <meta name="twitter:description" content="MERN Stack Developer & SOC Analyst from Pakistan.">
+    <meta name="twitter:image" content="assets/myimage.png">
+    <!-- PWA Manifest & Theme Color -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/myimage.png">
+    <link rel="canonical" href="https://abdurehman-mangrio.github.io/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JSON-LD Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Abdul Rehman",
+          "jobTitle": "Full-Stack Developer & Cybersecurity Expert",
+          "url": "https://abdurehman-mangrio.github.io/",
+          "image": "https://abdurehman-mangrio.github.io/assets/myimage.png",
+          "email": "abdulrehman786mangrio@gmail.com",
+          "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressCountry": "PK" },
+          "sameAs": [
+            "https://github.com/abdurehman-mangrio",
+            "https://linkedin.com/in/abdul-rehman-156940247",
+            "https://t.me/abdurehman_mangrio"
+          ],
+          "knowsAbout": ["MERN Stack", "React.js", "Node.js", "MongoDB", "Cybersecurity", "VAPT", "Android Development", "SOC Operations"]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Abdul Rehman Portfolio",
+          "url": "https://abdurehman-mangrio.github.io/",
+          "description": "Professional portfolio of Abdul Rehman — MERN Stack Developer and SOC Analyst from Pakistan."
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
+    <!-- Custom Smooth Cursor -->
+    <div id="custom-cursor"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">AR.</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Abdul</span>
+                <span class="logo-highlight">Rehman</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="cybersecurity.html" class="nav-link">Security</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">AR</div>
+            <button class="close-menu" id="closeMenu">✕</button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="cybersecurity.html">Security</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="mobile-menu-social">
+            <a href="https://github.com/abdurehman-mangrio" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/abdul-rehman-156940247" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:abdulrehman786mangrio@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for opportunities
+                    </div>
+                    <h1 data-aos-delay="200">
+                    Crafting <span class="highlight">Secure</span> <br>
+                    <span class="typed-text"></span>
+                </h1>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                    I am a <strong>MERN Stack Specialist</strong> and <strong>SOC Analyst</strong> with experience building 
+                    15+ scalable web applications. Currently specializing in VAPT and Enterprise-grade security.
+                </p>
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+                        <a href="contact.html" class="btn-outline">Let's Connect <i class="fas fa-comment"></i></a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number"><span class="counter-value" data-target="15" data-suffix="+">0</span></div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number"><span class="counter-value" data-target="3" data-suffix="+">0</span></div>
+                            <div class="stat-label">Years Exp</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number"><span class="counter-value" data-target="100" data-suffix="%">0</span></div>
+                            <div class="stat-label">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual" data-aos="fade-left">
+                    <div class="hero-visual-glow"></div>
+                    <div class="hero-visual-glow-2"></div>
+                    
+                    <div class="hero-image-container">
+                        <div class="hero-image-wrapper">
+                            <img src="assets/myimage.png" alt="Abdul Rehman" class="hero-img">
+                        </div>
+                        
+                        <!-- Floating Tech Badges -->
+                        <div class="floating-badge badge-react" aria-label="React.js">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="floating-badge badge-node" aria-label="Node.js">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="floating-badge badge-security" aria-label="Cybersecurity">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Wave Divider -->
+    <div class="wave-container">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(14, 165, 233, 0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(14, 165, 233, 0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(14, 165, 233, 0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--dark-surface)" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">Services & <span class="highlight">Expertise</span></h2>
+                <p class="section-subtitle">Delivering high-quality solutions with modern technologies</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-image-header">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600" alt="Web Dev">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Full-stack web applications using MERN stack, responsive designs, and optimized performance.</p>
+                    <div class="service-tech"><span>React.js</span><span>Node.js</span><span>MongoDB</span></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-image-header">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600" alt="Cyber">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Cybersecurity</h3>
+                    <p>Vulnerability assessment, penetration testing, network security, and SOC operations.</p>
+                    <div class="service-tech"><span>VAPT</span><span>IDS/IPS</span><span>Threat Analysis</span></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-image-header">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600" alt="Mobile">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Android Development</h3>
+                    <p>Native Android apps with Java/Kotlin, Firebase integration, and Google Play publishing.</p>
+                    <div class="service-tech"><span>Java/Kotlin</span><span>Firebase</span><span>API Integration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <p class="section-subtitle">Some of my best work showcasing technical excellence</p>
+            </div>
+            <div class="projects-grid" id="featuredProjects"></div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="projects.html" class="btn-outline">View All Projects <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <div class="skills-grid">
+                <div class="skills-content" data-aos="fade-right">
+                    <span class="section-tag">Technical Proficiency</span>
+                    <h2>Tools & <span class="highlight">Technologies</span></h2>
+                    <p>I work with a modern tech stack to build robust applications</p>
+                </div>
+                <div class="skills-sphere-container" data-aos="fade-left" style="display: flex; justify-content: center; align-items: center; min-height: 350px;">
+                    <div id="skill-sphere" style="color: var(--primary); font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 600;">
+                        <!-- Fallback skill badges shown if CDN fails -->
+                        <div id="skills-fallback" style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;max-width:500px;">
+                            <span style="background:rgba(14,165,233,0.1);color:var(--primary);border:1px solid rgba(14,165,233,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">React.js</span>
+                            <span style="background:rgba(14,165,233,0.1);color:var(--primary);border:1px solid rgba(14,165,233,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">Node.js</span>
+                            <span style="background:rgba(14,165,233,0.1);color:var(--primary);border:1px solid rgba(14,165,233,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">MongoDB</span>
+                            <span style="background:rgba(14,165,233,0.1);color:var(--primary);border:1px solid rgba(14,165,233,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">Express.js</span>
+                            <span style="background:rgba(139,92,246,0.1);color:#8b5cf6;border:1px solid rgba(139,92,246,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">Cybersecurity</span>
+                            <span style="background:rgba(139,92,246,0.1);color:#8b5cf6;border:1px solid rgba(139,92,246,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">VAPT</span>
+                            <span style="background:rgba(14,165,233,0.1);color:var(--primary);border:1px solid rgba(14,165,233,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">Python</span>
+                            <span style="background:rgba(14,165,233,0.1);color:var(--primary);border:1px solid rgba(14,165,233,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">Android</span>
+                            <span style="background:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">Firebase</span>
+                            <span style="background:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">Kotlin</span>
+                            <span style="background:rgba(14,165,233,0.1);color:var(--primary);border:1px solid rgba(14,165,233,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">REST API</span>
+                            <span style="background:rgba(14,165,233,0.1);color:var(--primary);border:1px solid rgba(14,165,233,0.3);padding:0.5rem 1.2rem;border-radius:50px;font-size:0.9rem;font-weight:600;">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What <span class="highlight">Clients Say</span></h2>
+            </div>
+            <div class="testimonials-grid" id="testimonials"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Ready to Start a Project?</h2>
+                <p>Let's collaborate and bring your ideas to life with modern technology solutions.</p>
+                <a href="contact.html" class="btn-primary btn-large">Get In Touch <i class="fas fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923325386563" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with me</span>
+    </a>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">Abdul</span>
+                        <span class="logo-highlight">Rehman</span>
+                    </div>
+                    <p>Building high-performance, secure digital experiences with a focus on modern web engineering and cybersecurity excellence.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/abdurehman-mangrio" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span class="live-indicator pulse-dot"></span>
+                        </a>
+                        <a href="https://linkedin.com/in/abdul-rehman-156940247" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://t.me/abdurehman_mangrio" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Professional</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="projects.html">Portfolio</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="cybersecurity.html">Security</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="index.html#services">Web Development</a>
+                    <a href="cybersecurity.html">SOC Operations</a>
+                    <a href="cybersecurity.html">VAPT Services</a>
+                    <a href="index.html#services">App Development</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest tech insights and project updates.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" id="newsletterEmail" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Abdul Rehman. Built with <i class="fas fa-heart pulse" style="color: #ef4444;"></i> in Pakistan</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <!-- TagCloud for 3D Sphere -->
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Newsletter form → Formspree
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const email = document.getElementById('newsletterEmail').value;
+                const btn = this.querySelector('button');
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                try {
+                    const res = await fetch('https://formspree.io/f/xkoypoeq', {
+                        method: 'POST',
+                        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, _subject: 'New Newsletter Subscriber' })
+                    });
+                    btn.innerHTML = res.ok ? '<i class="fas fa-check"></i>' : '<i class="fas fa-paper-plane"></i>';
+                    if (res.ok) { this.reset(); setTimeout(() => btn.innerHTML = '<i class="fas fa-paper-plane"></i>', 3000); }
+                } catch { btn.innerHTML = '<i class="fas fa-paper-plane"></i>'; }
+            });
+        }
+    </script>
+</body>
+
+</html>

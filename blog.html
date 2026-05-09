@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Abdul Rehman - Tech Insights & Developer Tips</title>
+    <meta name="description" content="Tech articles by Abdul Rehman covering MERN Stack, Cybersecurity, Flutter, SEO, REST APIs, React performance, and AI in web development.">
+    <meta name="author" content="Abdul Rehman">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tech Blog | Abdul Rehman - Developer Insights">
+    <meta property="og:description" content="In-depth articles on web development, cybersecurity, mobile apps, SEO, and AI — by Abdul Rehman.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/myimage.png">
+    <meta property="og:url" content="https://abdurehman-mangrio.github.io/blog.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/myimage.png">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://abdurehman-mangrio.github.io/blog.html">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <!-- Custom Smooth Cursor -->
+    <div id="custom-cursor"></div>
+    <nav class="navbar">
+        <div class="container"><a href="index.html" class="logo"><span class="logo-text">Abdul</span><span
+                    class="logo-highlight">Rehman</span></a>
+            <div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="about.html"
+                    class="nav-link">About</a><a href="projects.html" class="nav-link">Projects</a><a
+                    href="resume.html" class="nav-link">Resume</a><a
+                    href="cybersecurity.html" class="nav-link">Security</a><a href="blog.html"
+                    class="nav-link active">Blog</a><a href="contact.html" class="nav-link">Contact</a></div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">AR</div><button class="close-menu" id="closeMenu">✕</button>
+        </div>
+        <div class="mobile-menu-links"><a href="index.html">Home</a><a href="about.html">About</a><a
+                href="projects.html">Projects</a><a href="resume.html">Resume</a><a href="cybersecurity.html">Security</a><a href="blog.html">Blog</a><a
+                href="contact.html">Contact</a></div>
+        <div class="mobile-menu-social"><a href="https://github.com/abdurehman-mangrio" target="_blank"><i
+                    class="fab fa-github"></i></a><a href="https://linkedin.com/in/abdul-rehman-156940247"
+                target="_blank"><i class="fab fa-linkedin-in"></i></a><a
+                href="mailto:abdulrehman786mangrio@gmail.com"><i class="fas fa-envelope"></i></a></div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Latest <span class="highlight">Insights</span></h1>
+            <p data-aos="fade-up">Thoughts on tech, security, and development</p>
+        </div>
+    </section>
+
+    <!-- Animated Wave Divider -->
+    <div class="wave-container">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(14, 165, 233, 0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(14, 165, 233, 0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(14, 165, 233, 0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--dark-surface)" />
+            </g>
+        </svg>
+    </div>
+
+    <div class="container">
+        <!-- Featured Post Section -->
+        <div class="featured-post-container" data-aos="fade-up">
+            <div class="featured-badge"><i class="fas fa-star"></i> Featured Post</div>
+            <div class="featured-post-card">
+                <div class="featured-post-image">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1000" alt="Featured MERN Stack">
+                </div>
+                <div class="featured-post-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Development</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 12 min read</span>
+                    </div>
+                    <h2>The Future of Full-Stack Development: MERN Stack in 2026</h2>
+                    <p>Discover the latest architectural patterns, serverless integrations, and performance optimizations that are shaping the next generation of web applications.</p>
+                    <div class="featured-post-footer">
+                        <span class="blog-date">May 12, 2026</span>
+                        <a href="https://medium.com/tag/mern-stack" target="_blank" class="blog-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search and Filter Section -->
+        <div class="blog-controls" data-aos="fade-up">
+            <div class="blog-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="blogSearch" placeholder="Search articles by title, tech, or topic..." onkeyup="searchBlog()">
+            </div>
+            
+            <!-- Blog Category Filter -->
+            <div class="blog-filter">
+                <button class="blog-filter-btn active" data-filter="all" onclick="filterBlog('all',this)">All Articles</button>
+                <button class="blog-filter-btn" data-filter="development" onclick="filterBlog('development',this)">Development</button>
+                <button class="blog-filter-btn" data-filter="security" onclick="filterBlog('security',this)">Security</button>
+                <button class="blog-filter-btn" data-filter="mobile" onclick="filterBlog('mobile',this)">Mobile Apps</button>
+                <button class="blog-filter-btn" data-filter="seo" onclick="filterBlog('seo',this)">SEO</button>
+                <button class="blog-filter-btn" data-filter="ai" onclick="filterBlog('ai',this)">AI</button>
+                <button class="blog-filter-btn" data-filter="backend" onclick="filterBlog('backend',this)">Backend</button>
+            </div>
+        </div>
+
+        <div class="blog-grid">
+            <div class="blog-card" data-aos="fade-up" data-category="development">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1000" alt="MERN Stack">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-meta">
+                        <span class="blog-category">Development</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
+                    </div>
+                    <h3>Scaling MERN Stack Apps in 2026</h3>
+                    <p class="blog-date">May 10, 2026</p>
+                    <p>Deep dive into optimizing MongoDB queries and React frontend performance for production-grade applications.</p>
+                    <a href="https://medium.com/tag/mern-stack" target="_blank" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000" alt="Cyber Security">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-meta">
+                        <span class="blog-category">Security</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <h3>Implementing Zero Trust Architecture</h3>
+                    <p class="blog-date">May 05, 2026</p>
+                    <p>Why modern enterprises are moving towards Zero Trust and how to secure your REST APIs effectively.</p>
+                    <a href="https://medium.com/tag/zero-trust" target="_blank" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=1000" alt="Android Dev">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-meta">
+                        <span class="blog-category">Mobile</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 6 min read</span>
+                    </div>
+                    <h3>Kotlin Coroutines: The Modern Way</h3>
+                    <p class="blog-date">April 28, 2026</p>
+                    <p>Master asynchronous programming in Android with Kotlin Coroutines and Flow for smoother UI experiences.</p>
+                    <a href="https://medium.com/tag/kotlin" target="_blank" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card" data-aos="fade-up" data-category="flutter">
+                <div class="blog-image">
+                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Flutter UI">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-meta">
+                        <span class="blog-category">Flutter</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 7 min read</span>
+                    </div>
+                    <h3>Building Stunning Flutter UIs from Scratch</h3>
+                    <p class="blog-date">April 20, 2026</p>
+                    <p>A complete guide to Flutter widgets, custom painters, and animations that will make your app stand out on the Play Store.</p>
+                    <a href="https://medium.com/tag/flutter" target="_blank" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="100" data-category="seo">
+                <div class="blog-image">
+                    <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="SEO Core Web Vitals">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-meta">
+                        <span class="blog-category">SEO</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 6 min read</span>
+                    </div>
+                    <h3>Core Web Vitals: The Complete 2026 Guide</h3>
+                    <p class="blog-date">April 14, 2026</p>
+                    <p>LCP, INP, and CLS explained. Learn how to audit, fix, and monitor your site's Core Web Vitals to rank higher on Google.</p>
+                    <a href="https://medium.com/tag/core-web-vitals" target="_blank" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="200" data-category="backend">
+                <div class="blog-image">
+                    <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="REST API Design">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-meta">
+                        <span class="blog-category">Backend</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 9 min read</span>
+                    </div>
+                    <h3>REST API Design Best Practices Every Dev Must Know</h3>
+                    <p class="blog-date">April 07, 2026</p>
+                    <p>From versioning and pagination to error handling and JWT auth — build APIs that are clean, secure, and developer-friendly.</p>
+                    <a href="https://medium.com/tag/rest-api" target="_blank" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card" data-aos="fade-up" data-category="ai">
+                <div class="blog-image">
+                    <img src="https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="AI in Web Dev">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-meta">
+                        <span class="blog-category">AI & Dev</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
+                    </div>
+                    <h3>How AI Is Changing Web Development in 2026</h3>
+                    <p class="blog-date">March 30, 2026</p>
+                    <p>From GitHub Copilot to AI-powered testing — discover which AI tools actually save time and which are just hype.</p>
+                    <a href="https://medium.com/tag/artificial-intelligence" target="_blank" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="100" data-category="security">
+                <div class="blog-image">
+                    <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Cybersecurity Career">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-meta">
+                        <span class="blog-category">Security</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 10 min read</span>
+                    </div>
+                    <h3>Cybersecurity Career Roadmap for Beginners</h3>
+                    <p class="blog-date">March 22, 2026</p>
+                    <p>A step-by-step path from zero to SOC Analyst — covering certifications (CEH, CompTIA), tools, labs, and real job tips.</p>
+                    <a href="https://medium.com/tag/cybersecurity" target="_blank" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card" data-aos="fade-up" data-aos-delay="200" data-category="development">
+                <div class="blog-image">
+                    <img src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="React Performance">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-meta">
+                        <span class="blog-category">React</span>
+                        <span class="blog-read-time"><i class="far fa-clock"></i> 7 min read</span>
+                    </div>
+                    <h3>10 React Performance Tips You Should Use Today</h3>
+                    <p class="blog-date">March 15, 2026</p>
+                    <p>useMemo, useCallback, lazy loading, and code splitting — practical techniques to slash render times and boost your app speed.</p>
+                    <a href="https://medium.com/tag/react" target="_blank" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Newsletter CTA -->
+        <div class="blog-newsletter-section" data-aos="fade-up">
+            <div class="newsletter-content">
+                <h2>Never Miss an Update</h2>
+                <p>Join 2,000+ developers getting my weekly insights on MERN, Security, and Cloud.</p>
+                <form class="blog-newsletter-form" id="blogPageNewsletter">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">Abdul</span>
+                        <span class="logo-highlight">Rehman</span>
+                    </div>
+                    <p>Building high-performance, secure digital experiences with a focus on modern web engineering and cybersecurity excellence.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/abdurehman-mangrio" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span class="live-indicator pulse-dot"></span>
+                        </a>
+                        <a href="https://linkedin.com/in/abdul-rehman-156940247" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://t.me/abdurehman_mangrio" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Professional</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="projects.html">Portfolio</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="cybersecurity.html">Security</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="index.html#services">Web Development</a>
+                    <a href="cybersecurity.html">SOC Operations</a>
+                    <a href="cybersecurity.html">VAPT Services</a>
+                    <a href="index.html#services">App Development</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest tech insights and project updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Abdul Rehman. Built with <i class="fas fa-heart" style="color: #ef4444;"></i> in Pakistan</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Add missing data-category to first 3 cards
+        const cards = document.querySelectorAll('.blog-card');
+        const defaultCats = ['development','security','mobile'];
+        cards.forEach((card, i) => {
+            if (!card.getAttribute('data-category') && defaultCats[i]) {
+                card.setAttribute('data-category', defaultCats[i]);
+            }
+        });
+
+        function filterBlog(category, btn) {
+            // Update button styles
+            document.querySelectorAll('.blog-filter-btn').forEach(b => {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+
+            // Filter cards
+            document.querySelectorAll('.blog-card').forEach(card => {
+                const cat = card.getAttribute('data-category') || '';
+                if (category === 'all' || cat === category) {
+                    card.style.display = 'flex';
+                    card.style.animation = 'fadeInUp 0.4s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function searchBlog() {
+            const input = document.getElementById('blogSearch');
+            const filter = input.value.toLowerCase();
+            const cards = document.querySelectorAll('.blog-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const text = card.querySelector('p').innerText.toLowerCase();
+                if (title.includes(filter) || text.includes(filter)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Newsletter form → Formspree
+        document.getElementById('blogPageNewsletter')?.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Subscribing...';
+            
+            try {
+                const res = await fetch('https://formspree.io/f/xkoypoeq', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: this.querySelector('input').value, _subject: 'Blog Newsletter' })
+                });
+                if (res.ok) {
+                    btn.innerText = 'Subscribed! Check email.';
+                    this.reset();
+                } else { btn.innerText = originalText; }
+            } catch { btn.innerText = originalText; }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Abdul Rehman - Full-Stack Developer Portfolio</title>
+    <meta name="description" content="Explore Abdul Rehman's portfolio of 15+ professional projects including MERN Stack web apps, Flutter mobile apps, and SEO tools.">
+    <meta name="author" content="Abdul Rehman">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Projects | Abdul Rehman Portfolio">
+    <meta property="og:description" content="15+ professional projects spanning web development, cybersecurity, mobile apps, and SEO.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/myimage.png">
+    <meta property="og:url" content="https://abdurehman-mangrio.github.io/projects.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/myimage.png">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://abdurehman-mangrio.github.io/projects.html">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <!-- Custom Smooth Cursor -->
+    <div id="custom-cursor"></div>
+    <nav class="navbar">
+        <div class="container"><a href="index.html" class="logo"><span class="logo-text">Abdul</span><span
+                    class="logo-highlight">Rehman</span></a>
+            <div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="about.html"
+                    class="nav-link">About</a><a href="projects.html" class="nav-link active">Projects</a><a
+                    href="resume.html" class="nav-link">Resume</a><a
+                    href="cybersecurity.html" class="nav-link">Security</a><a href="blog.html"
+                    class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a></div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">AR</div><button class="close-menu" id="closeMenu">✕</button>
+        </div>
+        <div class="mobile-menu-links"><a href="index.html">Home</a><a href="about.html">About</a><a
+                href="projects.html">Projects</a><a href="resume.html">Resume</a><a href="cybersecurity.html">Security</a><a href="blog.html">Blog</a><a
+                href="contact.html">Contact</a></div>
+        <div class="mobile-menu-social"><a href="https://github.com/abdurehman-mangrio" target="_blank"><i
+                    class="fab fa-github"></i></a><a href="https://linkedin.com/in/abdul-rehman-156940247"
+                target="_blank"><i class="fab fa-linkedin-in"></i></a><a
+                href="mailto:abdulrehman786mangrio@gmail.com"><i class="fas fa-envelope"></i></a></div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-up">My <span class="highlight">Projects</span></h1>
+            <p data-aos="fade-up">A showcase of my latest work and contributions</p>
+        </div>
+    </section>
+
+    <!-- Animated Wave Divider -->
+    <div class="wave-container">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(14, 165, 233, 0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(14, 165, 233, 0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(14, 165, 233, 0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--dark-surface)" />
+            </g>
+        </svg>
+    </div>
+
+    <section class="projects-grid-page">
+        <div class="container">
+            <div class="project-filters" data-aos="fade-up"><button class="filter-btn active" data-filter="all">All
+                    Projects</button><button class="filter-btn" data-filter="web">Web Development</button><button
+                    class="filter-btn" data-filter="android">Android</button><button class="filter-btn"
+                    data-filter="security">Cybersecurity</button><button class="filter-btn"
+                    data-filter="seo">SEO</button></div>
+            <div class="projects-container" id="projectsContainer"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">Abdul</span>
+                        <span class="logo-highlight">Rehman</span>
+                    </div>
+                    <p>Building high-performance, secure digital experiences with a focus on modern web engineering and cybersecurity excellence.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/abdurehman-mangrio" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span class="live-indicator pulse-dot"></span>
+                        </a>
+                        <a href="https://linkedin.com/in/abdul-rehman-156940247" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://t.me/abdurehman_mangrio" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Professional</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="projects.html">Portfolio</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="cybersecurity.html">Security</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="index.html#services">Web Development</a>
+                    <a href="cybersecurity.html">SOC Operations</a>
+                    <a href="cybersecurity.html">VAPT Services</a>
+                    <a href="index.html#services">App Development</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest tech insights and project updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Abdul Rehman. Built with <i class="fas fa-heart pulse" style="color: #ef4444;"></i> in Pakistan</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const projects = [
+            { id: "react-weather", title: "React Weather App", category: "web", description: "Real-time weather dashboard with location-based updates and multi-day forecasts.", tech: ["React", "API", "JavaScript", "Vite"], image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=1000", liveUrl: "https://react-weather-app-zeta-lime.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/react-weather-app" },
+            { id: "coffee-web", title: "Coffee Web Portal", category: "web", description: "Premium responsive coffee brand landing page with glassmorphism and modern UI transitions.", tech: ["HTML5", "CSS3", "JavaScript", "AOS"], image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000", liveUrl: "https://coffee-web-blond-beta.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/coffee-web" },
+            { id: "movie-search", title: "Movie Search Engine", category: "web", description: "Dynamic film explorer using TMDB API with real-time search and detailed movie metadata.", tech: ["React", "REST API", "Tailwind", "Framer"], image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1000", liveUrl: "https://movie-search-app-six-tawny.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/movie-search-app" },
+            { id: "expense-tracker", title: "Expense Tracker Pro", category: "web", description: "Financial tracking tool with visual analytics and local storage for data persistence.", tech: ["React", "Context API", "CSS3", "JavaScript"], image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000", liveUrl: "https://expense-tracker-app-smoky-mu.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/expense-tracker-app" },
+            { id: "travel-tour", title: "Travel & Tour Website", category: "web", description: "Professional travel agency platform showcasing global tour packages with interactive destination cards.", tech: ["HTML5", "CSS3", "JavaScript", "GSAP"], image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1000", liveUrl: "https://travel-tour-website-mu.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/travel-tour-website" },
+            { id: "ecommerce-admin", title: "E-Commerce Admin Panel", category: "web", description: "Fully responsive React/Tailwind dashboard with interactive charts and order management.", tech: ["React", "Tailwind", "Recharts", "Vite"], image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000", liveUrl: "https://ecommerce-admin-panel-xi-three.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/ecommerce-admin-panel" },
+            { id: "ai-quiz", title: "AI Protected Quiz App", category: "web", description: "Security-focused quiz application with AI-based monitoring and technical stack transparency.", tech: ["React", "Node.js", "AI Integration", "Socket.io"], image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=1000", liveUrl: "https://ai-protected-quiz-app.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/AI-Protected-Quiz-App" },
+            { id: "shadowtwin", title: "ShadowTwin Framework", category: "security", description: "Advanced Evil Twin framework for wireless penetration testing and security research.", tech: ["Python", "Networking", "Wireless Security"], image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000", liveUrl: "#", githubUrl: "https://github.com/abdurehman-mangrio/shadowtwin" },
+            { id: "nearby-scanner", title: "NearBy Scanner Tracker", category: "security", description: "Wireless device scanner and tracker for identifying nearby bluetooth/wifi signals.", tech: ["Python", "IoT", "Radio Signal"], image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000", liveUrl: "#", githubUrl: "https://github.com/abdurehman-mangrio/Near_By_Scanner_Tracker" },
+            { id: "recipe-finder", title: "Recipe Finder Hub", category: "web", description: "Search engine for global recipes with ingredient filters and step-by-step instructions.", tech: ["JavaScript", "API", "CSS3", "HTML5"], image: "https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=1000", liveUrl: "https://recipe-finder-app-green-sigma.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/recipe-finder-app" },
+            { id: "techsphere-backend", title: "TechSphere Admin Backend", category: "web", description: "Scalable REST API for enterprise admin panels with secure authentication.", tech: ["Node.js", "Express", "MongoDB", "JWT"], image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000", liveUrl: "https://techsphere-admin-backend.vercel.app/", githubUrl: "https://github.com/abdurehman-mangrio/techsphere-admin-backend" },
+            { id: "blog-website", title: "Modern Blog Platform", category: "web", description: "Full-featured blog system with multi-author support and SEO optimization.", tech: ["TypeScript", "React", "Node.js", "MongoDB"], image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000", liveUrl: "https://blog-website-taupe-five.vercel.app", githubUrl: "https://github.com/abdurehman-mangrio/blog-website" },
+            { id: "crud-app-ui", title: "Advanced CRUD Interface", category: "web", description: "Sophisticated frontend for management systems with real-time data sync.", tech: ["React", "Material UI", "Redux"], image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000", liveUrl: "https://crud-app-ui-beige.vercel.app/", githubUrl: "https://github.com/abdurehman-mangrio/crud-app-ui" },
+            { id: "hackathon-portal", title: "Hackathon Event Portal", category: "web", description: "Registration and management platform for developer events and competitions.", tech: ["HTML5", "CSS3", "JavaScript"], image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000", liveUrl: "https://hackathon-portal-red.vercel.app/", githubUrl: "https://github.com/abdurehman-mangrio/hackathon-portal" },
+            { id: "crud-app-core", title: "CRUD System Backend", category: "web", description: "Core logic for data management applications with high-performance routing.", tech: ["JavaScript", "Node.js", "SQL/NoSQL"], image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1000", liveUrl: "https://github.com/abdurehman-mangrio/crud-app", githubUrl: "https://github.com/abdurehman-mangrio/crud-app" },
+            { id: "flutter-portfolio", title: "Professional Flutter Portfolio", category: "android", description: "A high-performance, multi-platform portfolio application built with Flutter and Dart.", tech: ["Flutter", "Dart", "Rive", "Provider"], image: "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", liveUrl: "https://github.com/lohanidamodar/flutter_portfolio", githubUrl: "https://github.com/lohanidamodar/flutter_portfolio" },
+            { id: "flutter-ecommerce", title: "E-Commerce Pro Solution", category: "android", description: "Complete retail mobile app with advanced filtering, cart logic, and Firebase integration.", tech: ["Flutter", "Firebase", "GetX"], image: "https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", liveUrl: "https://github.com/abuanwar07/E-commerce-Complete-Flutter-App", githubUrl: "https://github.com/abuanwar07/E-commerce-Complete-Flutter-App" },
+            { id: "android-chat", title: "Real-Time Chat Messenger", category: "android", description: "Native Android messaging app with end-to-end encryption and real-time Socket.io sync.", tech: ["Kotlin", "Socket.io", "MVVM", "Room"], image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", liveUrl: "https://github.com/getstream/stream-chat-android", githubUrl: "https://github.com/getstream/stream-chat-android" },
+            { id: "sitepulse-seo", title: "SitePulse Technical Auditor", category: "seo", description: "Technical SEO crawler for identifying indexing issues and Core Web Vitals performance benchmarks.", tech: ["Node.js", "Puppeteer", "Express"], image: "https://images.pexels.com/photos/5900222/pexels-photo-5900222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", liveUrl: "https://github.com/JustinBeckwith/linkinator", githubUrl: "https://github.com/JustinBeckwith/linkinator" },
+            { id: "ranktracker-analytics", title: "RankTracker Pro Analytics", category: "seo", description: "Keyword position tracking dashboard with automated search engine data visualization and reporting.", tech: ["React", "TypeScript", "Chart.js"], image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", liveUrl: "https://github.com/hiteshjasani/serpbear", githubUrl: "https://github.com/hiteshjasani/serpbear" }
+        ];
+
+        function displayProjects(filter = 'all') {
+            const container = document.getElementById('projectsContainer');
+            const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+            container.innerHTML = filtered.map(p => `
+                <div class="project-card" data-category="${p.category}" data-aos="fade-up">
+                    <div class="project-image"><img src="${p.image}" alt="${p.title}" class="project-img-display"></div>
+                    <div class="project-info"><span class="project-category">${p.category.toUpperCase()}</span><h3>${p.title}</h3><p>${p.description}</p><div class="project-tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div><div class="project-links"><a href="project-details.html?id=${p.id}" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>${p.liveUrl !== '#' ? `<a href="${p.liveUrl}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}<a href="${p.githubUrl}" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a></div></div>
+                </div>
+            `).join('');
+            if (typeof initTilt === 'function') setTimeout(initTilt, 100);
+        }
+
+        displayProjects();
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                displayProjects(btn.dataset.filter);
+            });
+        });
+    </script>
+</body>
+
+</html>
