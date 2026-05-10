@@ -237,6 +237,19 @@
     font-weight: 600;
     color: var(--text-main);
     font-size: 1.1rem;
+    word-break: break-word;
+}
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+    .experience-badge {
+        right: 1rem;
+        padding: 1rem;
+        bottom: 1rem;
+    }
 }
 
 /* Projects Page Grid */
