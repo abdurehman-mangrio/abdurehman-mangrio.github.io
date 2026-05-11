@@ -25,9 +25,18 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pages.css">
+
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis for smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 </head>
 
 <body>
+    <!-- Noise Overlay -->
+    <div class="noise"></div>
+
     <!-- Custom Smooth Cursor -->
     <div id="custom-cursor"></div>
     <nav class="navbar">
@@ -181,12 +190,39 @@
         function displayProjects(filter = 'all') {
             const container = document.getElementById('projectsContainer');
             const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
-            container.innerHTML = filtered.map(p => `
-                <div class="project-card" data-category="${p.category}" data-aos="fade-up">
-                    <div class="project-image"><img src="${p.image}" alt="${p.title}" class="project-img-display"></div>
-                    <div class="project-info"><span class="project-category">${p.category.toUpperCase()}</span><h3>${p.title}</h3><p>${p.description}</p><div class="project-tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div><div class="project-links"><a href="project-details.html?id=${p.id}" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>${p.liveUrl !== '#' ? `<a href="${p.liveUrl}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}<a href="${p.githubUrl}" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a></div></div>
+            container.innerHTML = filtered.map((p, index) => `
+                <div class="project-card" data-category="${p.category}" style="opacity: 0;">
+                    <div class="project-image">
+                        <img src="${p.image}" alt="${p.title}" class="project-img-display">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="project-details.html?id=${p.id}" class="project-link-icon" title="View Details"><i class="fas fa-eye"></i></a>
+                                ${p.liveUrl !== '#' ? `<a href="${p.liveUrl}" target="_blank" class="project-link-icon" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>` : ''}
+                                <a href="${p.githubUrl}" target="_blank" class="project-link-icon" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">${p.category.toUpperCase()}</span>
+                        <h3>${p.title}</h3>
+                        <p>${p.description}</p>
+                        <div class="project-tech">
+                            ${p.tech.map(t => `<span>${t}</span>`).join('')}
+                        </div>
+                    </div>
                 </div>
             `).join('');
+            
+            // GSAP Reveal
+            gsap.to(".project-card", {
+                opacity: 1,
+                y: 0,
+                stagger: 0.1,
+                duration: 0.8,
+                ease: "power4.out",
+                from: { y: 50 }
+            });
+            
             if (typeof initTilt === 'function') setTimeout(initTilt, 100);
         }
 

@@ -1,11 +1,10 @@
-/* Page Header */
 .page-header {
-    min-height: 40vh;
+    min-height: 45vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--dark-surface);
+    background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
     position: relative;
     overflow: hidden;
     margin-top: 80px;
@@ -60,16 +59,17 @@
 }
 .timeline-content {
     width: calc(50% - 3rem);
-    padding: 2rem;
-    background: var(--dark-surface);
+    padding: 2.5rem;
+    background: var(--dark-elevated);
     border: 1px solid var(--border-glass);
-    border-radius: 20px;
-    transition: var(--transition);
+    border-radius: 24px;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(var(--glass-blur));
 }
 .timeline-item:hover .timeline-content {
     border-color: var(--primary);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--card-shadow);
 }
 .timeline-item:nth-child(odd) .timeline-content {
     margin-left: auto;
@@ -111,15 +111,17 @@
 }
 .fact-card {
     padding: 3rem 2rem;
-    background: var(--dark-surface);
+    background: var(--dark-elevated);
     border: 1px solid var(--border-glass);
     border-radius: 24px;
-    transition: var(--transition);
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(var(--glass-blur));
 }
 .fact-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
     border-color: var(--primary);
-    background: rgba(14, 165, 233, 0.05);
+    background: rgba(14, 165, 233, 0.08);
+    box-shadow: var(--card-shadow);
 }
 .fact-number {
     font-size: 3rem;
@@ -480,13 +482,13 @@ textarea.form-control { resize: vertical; min-height: 150px; }
 }
 
 .blog-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: var(--dark-elevated);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border: 1px solid var(--border-glass);
     border-radius: 24px;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition-smooth);
     position: relative;
     height: 100%;
     display: flex;
@@ -496,7 +498,7 @@ textarea.form-control { resize: vertical; min-height: 150px; }
 .blog-card:hover {
     transform: translateY(-12px);
     border-color: var(--primary);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(14, 165, 233, 0.2);
+    box-shadow: var(--card-shadow);
 }
 
 .blog-image {
